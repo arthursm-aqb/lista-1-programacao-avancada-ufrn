@@ -1,0 +1,43 @@
+Aluno: Arthur da Silva Mariz - DCA0803 T01
+
+Questão 1.
+A importância do aprendizado da utilidade do uso dos ponteiros na engenharia é na flexibilidade dos recursos computacionais. A linguagem C permite a interação direta com o ponteiro, por exemplo - o engenheiro precisa atualizar algum valor de um programa ao decorrer do tempo, com o uso dos ponteiros não é necessário realocar outros diversos valores para realizar a tarefa pedida, é preciso somente de jogar a informação necessária para onde o ponteiro já está atuando.
+
+Questão 2.
+A. p == &i; \\O valor do endereço da variável p é igual a de i ou p = 3, p = 3 = i = 3;
+B. *p - *q;\\A variável "p" recupera o valor do ponteiro apontado a ela, a variável "q" acontece o mesmo, sendo assim, representadas pelo seguinte conteúdo, p = 3 e q = 5. O valor final dessa operação de *p - *q é igual à -2;
+C. **&p;\\Essa expressão terá o valor de 3;
+D. 3 - *p/(*q) + 7;\\O valor dessa expressão é 10.
+
+Questão 3.
+Os valores encontrados a partir da expressão dada pela questão são: 62fe1c, 7, 5, 15, 9.
+
+Questão 4.
+ As expressões com atribuições invalidas são as alternativas "b, d, e, f e h".
+
+Questão 5. 
+Os valores encontrados pelas expressões citadas na questão são:
+a= 20; 
+b= 29.0;
+c= p;
+d= e;
+e= p;
+f= e;
+g= t;
+h= 31;
+i= 45;
+j= 27;
+l= 31;
+m= 45;
+n= 45.
+
+Questão 6.
+Os valores encontrados de "i = %d" são -> 0, 1, 2, 3 e 4;
+Os valores encontrados dos arrays "vet[%d] = %.1f" são -> 1.1, 2.2, 3.3, 4.4 e 5.5;
+Os valores encontrados da representação alternativa dos arrays "*(f + %d) = %.1f" são -> 1.1, 2.2, 3.3, 4.4 e 5.5;
+Os valores encontrados do endereço hexadecimal da memória dos vetores "&vet[%d] = %x" são -> 79FDF0, 79FDF4, 79FDF8, 79FDFC e 79FD00;
+Os valores encontrados da representação alternativa do endereço hexadecimal da memória dos vetores "(f + %d) = %x" são -> 79FDF0, 79FDF4, 79FDF8, 79FDFC e 79FD00.
+
+Questão 7.
+
+
