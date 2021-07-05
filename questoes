@@ -39,5 +39,19 @@ Os valores encontrados do endereço hexadecimal da memória dos vetores "&vet[%d
 Os valores encontrados da representação alternativa do endereço hexadecimal da memória dos vetores "(f + %d) = %x" são -> 79FDF0, 79FDF4, 79FDF8, 79FDFC e 79FD00.
 
 Questão 7.
+A expressão que referencia o 3 elemento do vetor pulo é a primeira opção: "*(pulo+2)".
 
+Questão 8.
+Somente a expressão que irei citar na resposta é valida, as outras expressões são todas invalidas por causa do "`" que é um simbolo operacional que não existe na linguagem C;
+a. A expressão "p = mat + 1" é valida porque é a atribuição de array do vetor para o ponteiro, no entanto, com uma peculariedade - por ter um "mat+1" na atribuição, o ponteiro irá receber só o conteúdo do 2 espaço da memória do vetor.
 
+Questão 9.
+a. O primeiro programa é usado para mostrar os valores que possui dentro do array do vetor "vet", e para isso é utilizado um laço for e um printf com "*(vet+i)" que é a representação alternativa de vet[i];
+b. O segundo programa é usado para mostrar o endereço de memória  dos valores do vetor "vet", é usado para mostrar isso um laço e "%x" dentro do printf, além da representação alternativa do vet[i] - "*(vet+i).
+
+Questão 10.
+Programando um código para imprimir os valores do endereços da memória de cada expressão dos 4 tipos diferentes de variáveis, os seguintes valores foram achados:
+Tipo int    -   x+1 = 000000000079FDF4, x+2 = 000000000079FDF8, x+3 = 000000000079FDFC;
+Tipo char   -   y+1 = 000000000079FDED, y+2 = 000000000079FDEE, y+3 = 000000000079FDEF;
+Tipo float  -   z+1 = 000000000079FDD4, z+2 = 000000000079FDD8, z+3 = 000000000079FDDC;
+Tipo double -   c+1 = 000000000079FDB8, c+2 = 000000000079FDC0, c+3 = 000000000079FDC8.
