@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float comparar(const void* a, const void* b)//Array de troca de posições na memória para ordernar os valores em ordem crescente.
+{
+	if (*(float*)a == *(int*)b)
+	{
+		return 0;//Se o valor A e o valor B forem iguais, a função retorna "0", que significa que não acontecera a troca de posição.
+	}
+		else if (*(float*)a<*(float*)b)
+		{
+			return -1;//Se o valor de B for maior que A, a função retorna "-1", que significa a troca de posição entre o B e A.
+		}
+			else
+			{
+				return 1;//Senão for nenhuma das anteriores, então A é maior que B, dessa forma a função retorna "1" que significa a troca de posição entre A e B.
+			}
+}
+
+int main()
+{
+	float *numeros;
+	int aux;
+	//O inteiro aux vai ser usado para guardar a quantidade de números que o usuário deseja ordernar, enquanto isso, numeros será um ponteiro usado para a alocação dinâmica da memória.
+	
+	printf("Digite quantos números racionais você vai querer ordernar em ordem crescente: ");
+	scanf("%d", &aux);
+	numeros = (float *) malloc(aux*sizeof(float));//É reservado um tamanho n na memória para o ponteiro que aponta para float "numeros".
+	for(int i=0; i<aux; i++)
+	{
+		printf ("\nDigite o %d número: ", i+1);
+		scanf("%f", &numeros[i]);
+		printf ("\n");
+	}
+	//Um laço simples para guardar os valores que o usuário deseja ordernar de forma crescente.
+	qsort(numeros, aux, sizeof(float), comparar);
+	//O comando qsort recebe o array "numeros" para o qual irá apontar em seu endereço de memória, após isso, é especificado o tamanho do array "aux" e o número de bytes presente nessa operação. Por fim, é especificado a função comparar que irá retornar os valores -1, 0 ou 1, no qual o qsort utiliza para saber se irá realizar a troca de posições.
+	printf("\nNúmeros racionais em ordem crescente:\n");
+	for(int c=0; c<aux; c++) 
+	{
+ 		printf("%.2f\t", numeros[c]);
+	}
+	//Laço usado para imprimir os valores de forma crescente.
+	printf("\n");
+    free(numeros);//Comando utilizado para limpar a memória e evitar o risco de acontecer vazamento de memória.
+	return 0;
+}

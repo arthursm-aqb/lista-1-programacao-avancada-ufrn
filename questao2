@@ -1,0 +1,4 @@
+A. p == &i; \\O valor do endereço da variável p é igual a de i ou p = 3, p = 3 = i = 3;
+B. *p - *q;\\A variável "p" recupera o valor do ponteiro apontado a ela, a variável "q" acontece o mesmo, sendo assim, representadas pelo seguinte conteúdo, p = 3 e q = 5. O valor final dessa operação de *p - *q é igual à -2;
+C. **&p;\\Essa expressão terá o valor de 3;
+D. 3 - *p/(*q) + 7;\\O valor dessa expressão é 10.

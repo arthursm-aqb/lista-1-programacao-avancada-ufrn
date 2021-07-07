@@ -1,0 +1,42 @@
+O ponteiro para uma função significa que podemos definir quando será executado uma função específica que o ponteiro esteja apontando, sem deixar ela vísivel no código, além da possibilidade de passar valores de uma função para outras.
+
+Exemplo 1:
+int diferenca(int x, int y) // Função para onde o ponteiro irá apontar.
+{
+    int c;
+    c= x-y;
+    printf ("%d\n", c);
+}
+
+int main()
+{
+    int a, b;
+    int (*p) (int, int); // Declarado o ponteiro de funções onde recebe dois parâmetros inteiros.
+    p = diferenca; // É atribuido ao ponteiro a função diferença.
+    printf ("Digite dois números para a váriavel a e b:\n");
+    scanf ("%d %d", &a, &b);
+    p(a,b); // Acionando o ponteiro, não precisa citar o nome da função, ele vai realizar o papel de uma função já que recebeu o endereço da função "diferença". Por fim, ele retorna os valores obtidos dentro da função. 
+    return 0;
+}
+
+Exemplo 2:
+int ponteiro (int (*p)(int, int), int x, int y) // É declarado uma função ponteiro de dois inteiros, onde existe uma associação entre a função ponteiro e uma função normal que recebe duas variáveis inteiras que vão ser repassadas para a função ponteiro.
+{
+    return p(x, y); // A função retorna dois parâmetros da função normal associada a função ponteiro que agora pode ser alocada em outras funções.
+}
+
+int diferenca (int a, int b) // Uma função normal que retorna a diferença entre dois valores a e b.
+{
+    int c;
+    c = a-b;
+    printf ("%d\n", c);
+}
+
+int main()
+{
+    int n1, n2; // As variaveis que vão ser utilizadas pela função ponteiro
+    printf ("Digite dois números para a váriavel a e b:\n");
+    scanf ("%d %d", &n1, &n2);
+    ponteiro(diferenca, n1, n2); // Aqui a função ponteiro é executada e aponta para a função diferença, dessa forma, executando o código da função diferença utilizando os parâmetros "x e y" que ela recebeu.
+    return 0;
+}

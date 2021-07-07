@@ -1,0 +1,5 @@
+Programando um código para imprimir os valores do endereços da memória de cada expressão dos 4 tipos diferentes de variáveis, os seguintes valores foram achados:
+Tipo int    -   x+1 = 000000000079FDF4, x+2 = 000000000079FDF8, x+3 = 000000000079FDFC;
+Tipo char   -   y+1 = 000000000079FDED, y+2 = 000000000079FDEE, y+3 = 000000000079FDEF;
+Tipo float  -   z+1 = 000000000079FDD4, z+2 = 000000000079FDD8, z+3 = 000000000079FDDC;
+Tipo double -   c+1 = 000000000079FDB8, c+2 = 000000000079FDC0, c+3 = 000000000079FDC8.

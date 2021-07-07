@@ -1,0 +1,2 @@
+a. O primeiro programa é usado para mostrar os valores que possui dentro do array do vetor "vet", e para isso é utilizado um laço for e um printf com "*(vet+i)" que é a representação alternativa de vet[i];
+b. O segundo programa é usado para mostrar o endereço de memória  dos valores do vetor "vet", é usado para mostrar isso um laço e "%x" dentro do printf, além da representação alternativa do vet[i] - "*(vet+i).

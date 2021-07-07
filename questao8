@@ -1,0 +1,2 @@
+Somente a expressão que irei citar na resposta é valida, as outras expressões são todas invalidas por causa do "`" que é um simbolo operacional que não existe na linguagem C;
+a. A expressão "p = mat + 1" é valida porque é a atribuição de array do vetor para o ponteiro, no entanto, com uma peculariedade - por ter um "mat+1" na atribuição, o ponteiro irá receber só o conteúdo do 2 espaço da memória do vetor.

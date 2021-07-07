@@ -1,0 +1,8 @@
+a. aloha[2]=value; -> Válida;
+b. scanf("%f", &aloha); -> Inválida;
+c. aloha = "value"; -> Inválida;
+d. printf ("f", aloha); -> Válida;
+e. coisas[4][4] = aloha[3]; -> Válida;
+f. coisas[5] = aloha; -> Inválida;
+g. pf = value; -> Inválida;
+h. pf = aloha; -> Válida.

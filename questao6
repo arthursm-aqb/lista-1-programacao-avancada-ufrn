@@ -1,0 +1,5 @@
+Os valores encontrados de "i = %d" são -> 0, 1, 2, 3 e 4;
+Os valores encontrados dos arrays "vet[%d] = %.1f" são -> 1.1, 2.2, 3.3, 4.4 e 5.5;
+Os valores encontrados da representação alternativa dos arrays "*(f + %d) = %.1f" são -> 1.1, 2.2, 3.3, 4.4 e 5.5;
+Os valores encontrados do endereço hexadecimal da memória dos vetores "&vet[%d] = %x" são -> 79FDF0, 79FDF4, 79FDF8, 79FDFC e 79FD00;
+Os valores encontrados da representação alternativa do endereço hexadecimal da memória dos vetores "(f + %d) = %x" são -> 79FDF0, 79FDF4, 79FDF8, 79FDFC e 79FD00.
