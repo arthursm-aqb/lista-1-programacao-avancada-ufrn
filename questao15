@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int comparacao(int c, int d)
+{
+	int x;
+	if(c-d>0)
+	{
+		x=c;
+		c=d; 
+		d=x;
+	}
+		else if(c-d<0)
+		{
+			c=c;
+			d=d;
+		}
+			else
+			{
+				
+			}
+			
+	printf("\nElementos ordenados de forma crescente\n");
+	printf("%d\t%d", c,d);
+    printf("\n");
+}
+
+int ponteiro (int (*p)(int, int), int x, int y)
+{
+	return p(x,y);
+}
+
+int comparar(const void* e, const void* f)
+{
+	if (*(int*)e == *(int*)f)
+	{
+		return 0;//
+	}
+		else if (*(int*)e<*(int*)f)
+		{
+			return -1;
+		}
+			else
+			{
+				return 1;
+			}
+}
+
+int main()
+{
+	int a, b, *number;
+	printf("Digite dois números inteiros para ordernar de forma crescente: ");
+	scanf ("%d %d", &a, &b);
+    ponteiro(comparacao, a, b);
+    number = (int*) malloc(2*sizeof(int));
+    for(int i=0; i<2; i++)
+	{
+		printf ("\nDigite o %d número: ", i+1);
+		scanf("%d", &number[i]);
+		printf ("\n");
+	}
+
+    qsort(number, 2, sizeof(int), comparar);
+    printf("\nNúmeros inteiros em ordem crescente:\n");
+	for(int c=0; c<2; c++) 
+	{
+ 		printf("%d\t", number[c]);
+	}
+
+	printf("\n");
+    free(number);
+	return 0;
+}

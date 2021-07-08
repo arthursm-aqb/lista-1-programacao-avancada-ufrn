@@ -3,7 +3,7 @@
 
 float comparar(const void* a, const void* b)//Array de troca de posições na memória para ordernar os valores em ordem crescente.
 {
-	if (*(float*)a == *(int*)b)
+	if (*(float*)a == *(float*)b)
 	{
 		return 0;//Se o valor A e o valor B forem iguais, a função retorna "0", que significa que não acontecera a troca de posição.
 	}

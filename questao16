@@ -1,0 +1,86 @@
+O recurso utilizado para fazer a contagem do tempo de operação das funções foi a biblioteca time.h utilizando o recurso clock(). Na execução do programa feito foi registrado para a função baseada no qsort o tempo de execução de 0.002 milisegundos, enquanto o uso do qsort registrou 0.0000000 milisegundos.
+Baseado nos resultados encontrados, dá para notar que utilizando de uma função genérica para executar a execução da ordenação, ela demora mais tempo que o qsort para fazer a ordenação. Como a função qsort já é especializada para tal uso, ela minizima os passos necessários para ordenar, diferente de uma função normal onde ela precisa verificar diversas condições com diversas variáveis para no fim realizar a troca de posições.
+O código utilizado:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int comparacao(int c, int d)
+{
+	int x;
+	if(c-d>0)
+	{
+		x=c;
+		c=d; 
+		d=x;
+	}
+		else if(c-d<0)
+		{
+			c=c;
+			d=d;
+		}
+			else
+			{
+				
+			}
+			
+	printf("\nElementos ordenados de forma crescente\n");
+	printf("%d\t%d", c,d);
+    printf("\n");
+}
+
+int ponteiro (int (*p)(int, int), int x, int y)
+{
+	return p(x,y);
+}
+
+int comparar(const void* e, const void* f)
+{
+	if (*(int*)e == *(int*)f)
+	{
+		return 0;//
+	}
+		else if (*(int*)e<*(int*)f)
+		{
+			return -1;
+		}
+			else
+			{
+				return 1;
+			}
+}
+
+int main()
+{
+	int a, b, *number;
+	float tempo;
+	time_t time_funcao;
+	
+	printf("Digite dois números inteiros para ordernar de forma crescente: ");
+	scanf ("%d %d", &a, &b);
+	time_funcao = clock();
+    ponteiro(comparacao, a, b);
+    time_funcao = clock()-time_funcao;
+    printf("Tempo de execução = %f m/s", ((float)time_funcao)/CLOCKS_PER_SEC);
+    number = (int*) malloc(2*sizeof(int));
+    for(int i=0; i<2; i++)
+	{
+		printf ("\nDigite o %d número: ", i+1);
+		scanf("%d", &number[i]);
+		printf ("\n");
+	}
+	time_funcao = clock();
+    qsort(number, 2, sizeof(int), comparar);
+    time_funcao = clock()-time_funcao;
+    printf("Tempo de execução = %f m/s", ((float)time_funcao)/CLOCKS_PER_SEC);
+    printf("\nNúmeros inteiros em ordem crescente:\n");
+	for(int c=0; c<2; c++) 
+	{
+ 		printf("%d\t", number[c]);
+	}
+
+	printf("\n");
+    free(number);
+	return 0;
+}
